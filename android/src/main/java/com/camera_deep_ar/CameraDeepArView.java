@@ -155,7 +155,7 @@ public class CameraDeepArView implements PlatformView,
         } else {
             // Permission has already been granted
             initializeDeepAR();
-            setupCamera();
+            //TODO setupCamera();
         }
     }
 
@@ -669,18 +669,18 @@ public class CameraDeepArView implements PlatformView,
     }
 
 
-    @Override
-    public boolean onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        if (requestCode == 1 && grantResults.length > 0) {
-            for (int grantResult : grantResults) {
-                if (grantResult != PackageManager.PERMISSION_GRANTED) {
-                    return false;
-                }
-                initializeDeepAR();
-            }
-        }
-        return false;
-    }
+//    @Override
+//    public boolean onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+//        if (requestCode == 1 && grantResults.length > 0) {
+//            for (int grantResult : grantResults) {
+//                if (grantResult != PackageManager.PERMISSION_GRANTED) {
+//                    return false;
+//                }
+//                initializeDeepAR();
+//            }
+//        }
+//        return false;
+//    }
 
 
 }
